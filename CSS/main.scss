@@ -1,0 +1,346 @@
+$mycolors: (main: rgb(121, 219, 135),
+   back: rgb(54, 156, 62),
+   button: rgb(214, 86, 27),
+   zoom: rgb(92, 87, 18),
+   back1: rgb(251, 240, 191),
+   back_light: lighten(rgb(54, 156, 62), 40%),
+   back_dark: darken(rgb(54, 156, 62), 40%),
+   main_light: lighten(rgb(121, 219, 135), 10%),
+   main_dark: darken(rgb(121, 219, 135), 40%),
+   pale: rgb(207, 202, 129),
+   pale_dark: rgb(92, 87, 18));
+
+
+$padding: 15px;
+$borders: 10px;
+
+@function color($color_name) {
+   @return map-get($mycolors, $color_name);
+}
+
+body,
+html {
+   height: 100%;
+}
+
+body {
+   font-family: 'Montserrat', sans-serif;
+   margin: 0;
+   background-color: color(back1);
+
+   #bg {
+      clip-path: polygon(0 20%, 100% 20%, 82% 100%, 18% 100%);
+      background-color: color(back1);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      min-width: 700px;
+      z-index: -1;
+   }
+
+   /*   header a {
+      color: color(zoom);
+      text-decoration: none;
+      padding: $padding;
+      display: block;
+      text-transform: uppercase;
+      font-size: small;
+
+   }
+   */
+}
+
+main {
+   section#mainsection {
+      display: block;
+      color: color(zoom);
+      text-align: center;
+      background-color: color(pale);
+      font-family: 'Lemonada', cursive;
+      font-size: 2.1em;
+      margin: 0;
+      padding: 0;
+   }
+
+   .main {
+      background: color(pale);
+      padding: 10px;
+      margin: 2em auto;
+      border-radius: $borders;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+      width: 35%;
+      min-width: 360px;
+      opacity: 80%;
+      overflow: hidden;
+
+      //// 
+      /*
+      .liquid {
+         width: 100%;
+         height: 10px;
+         position: absolute;
+         top: -2%;
+         left: -10%;
+         background: #FFF;
+         border-radius: 10%;
+         animation: liquid 5s infinite;
+      }
+
+      .blobs {
+         filter: url("#goo");
+         width: 100%;
+         height: 100%;
+         position: relative;
+      }
+
+      .blobs .blob {
+         width: 30px;
+         height: 30px;
+         margin: 0 5px 0px 0;
+         background: #FFF;
+         border-radius: 50%;
+         position: absolute;
+         top: 0;
+         animation: drip_one 5s infinite;
+      }
+
+      .blobs .blob:nth-child(1) {
+         left: -14%;
+      }
+
+      .blobs .blob:nth-child(2) {
+         left: -1%;
+      }
+
+      .blobs .blob:nth-child(3) {
+         left: 12%;
+      }
+
+      .blobs .blob:nth-child(4) {
+         left: 25%;
+      }
+
+      .blobs .blob:nth-child(5) {
+         left: 38%;
+      }
+
+      .blobs .blob:nth-child(6) {
+         left: 51%;
+      }
+
+      .blobs .blob:nth-child(7) {
+         left: 64%;
+      }
+
+      .blobs .blob:nth-child(8) {
+         left: 77%;
+      }
+
+      .blobs .blob:nth-child(9) {
+         left: 90%;
+      }
+
+      .blobs .blob:nth-of-type(4n-7) {
+         width: 65px;
+         animation: drip_four 5s infinite;
+      }
+
+      .blobs .blob:nth-of-type(3n-2) {
+         width: 26px;
+      }
+
+      .blobs .blob:nth-of-type(2) {
+         width: 22px;
+      }
+
+      .blobs .blob:nth-of-type(8) {
+         animation: drip_five 5s infinite;
+      }
+
+      .blobs .blob:nth-of-type(4n+2) {
+         height: 56px;
+         animation: drip_two 5s infinite;
+      }
+
+      .blobs .blob:nth-of-type(6n-2) {
+         height: 42px;
+         animation: drip_three 5s infinite;
+      }
+
+      @keyframes drip_one {
+         from {
+            top: 0;
+         }
+
+         to {
+            top: 103%;
+         }
+      }
+
+      @keyframes drip_two {
+         from {
+            top: 0;
+         }
+
+         to {
+            top: 104%;
+         }
+      }
+
+      @keyframes drip_three {
+         from {
+            top: 0;
+            height: 52px;
+         }
+
+         to {
+            top: 102%;
+            height: 132px;
+         }
+      }
+
+      @keyframes drip_four {
+         from {
+            top: 0;
+            width: 65px;
+            height: 30px;
+         }
+
+         to {
+            top: 102%;
+            width: 75px;
+            height: 45px;
+         }
+      }
+
+      @keyframes drip_five {
+         from {
+            top: 0;
+            height: 30px;
+         }
+
+         to {
+            top: 102%;
+            height: 72px;
+         }
+      }
+
+      @keyframes liquid {
+         from {
+            height: 15px;
+         }
+
+         to {
+            height: 109%;
+         }
+      }
+*/
+      ////
+      form#booking {
+         p {
+            font-size: 1em;
+            border-radius: $borders;
+            text-decoration: none;
+            font-weight: normal;
+            display: block;
+            text-align: center;
+            margin: 10px auto 0 auto;
+
+            label input[type] {
+               border-radius: $borders;
+               margin: 10px auto 0 auto;
+               text-align: center;
+               font-size: 1em;
+               width: 10em;
+               height: 1.5em;
+               border: none;
+
+
+            }
+         }
+
+         fieldset {
+            margin: 0, auto;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            border-radius: $borders;
+
+
+            p {
+               margin: 0, auto;
+               text-align: center;
+               font-size: 1em;
+               line-height: 0;
+
+            }
+
+            #wrapper {
+
+               display: flex;
+               /* background: gray; */
+               flex-direction: column;
+               align-content: center;
+               justify-content: space-between;
+               border-radius: $borders;
+
+               input {
+                  border-radius: $borders;
+                  width: 3em;
+                  text-align: center;
+
+               }
+
+            }
+         }
+
+         p {
+            label textarea {
+               border-radius: $borders;
+               text-align: center;
+               width: 15em;
+
+            }
+         }
+
+
+         p {
+            button {
+               background: color(pale_dark);
+               border-radius: $borders;
+               font-size: 1em;
+               width: 100px;
+               color: white;
+            }
+         }
+
+
+      }
+
+      #resultForm {
+         width: 70%;
+         margin: 20px auto;
+         padding: 2em;
+         background: color(pale_dark);
+         border-radius: $borders;
+      }
+
+      #resultForm ul.form-results {
+         list-style: none;
+         padding-left: 0;
+      }
+
+      #resultForm ul.form-results li {
+         margin: 0.2em 0;
+         color: white;
+      }
+
+      #resultForm ul.form-results li label {
+         width: 200px;
+         display: inline-block;
+         font-weight: bold;
+         color: white;
+      }
+
+   }
+}

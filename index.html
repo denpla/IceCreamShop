@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Web Shop</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="bg"><img src="images4.jpg" alt="Ice" width="100%" height="100%"></div>
+    <!--
+        <header>
+            <a href="#">Zoom</a>
+        </header>
+-->
+    <main>
+
+        <section id="mainsection">
+            <h1>Welcome to our Ice Cream shop</h1>
+
+        </section>
+
+        <div class="main">
+            <div class="blobs">
+                <div class="liquid"></div>
+                <div class="blob"></div>
+                <div class="blob"></div>
+                <div class="blob"></div>
+                <div class="blob"></div>
+                <div class="blob"></div>
+                <div class="blob"></div>
+                <div class="blob"></div>
+                <div class="blob"></div>
+            </div>
+            <div class=""></div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0">
+                <defs>
+                    <filter id="goog">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                            result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                            result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                </defs>
+            </svg>
+            <form id="booking" method="get" enctype="application/x-www-form-urlencoded" action="">
+
+                <p>
+                    <label>Name <br>
+                        <input type="text" name="customer_name" id="customer_name" value="">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Phone <br>
+                        <input type="tel" name="phone_number" id="phone_number" value="">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Email <br>
+                        <input type="email" name="email_address" id="email_address" value="">
+                    </label>
+                </p>
+
+                <fieldset>
+                    <legend>How we will serve?</legend>
+                    <p><label> <input type="radio" name="box" value="pan" checked> Pan </label></p>
+                    <p><label> <input type="radio" name="box" value="corn"> Corn </label></p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Our suggestions</legend>
+                    <div id="wrapper">
+                        <span><label> <input type="number" name="Vanilla" value="" min="1" max="5">
+                                Vanilla
+                            </label></span>
+                        <span><label> <input type="number" name="Pistachio" value="" min="1" max="5">
+                                Pistachio
+                            </label>
+                        </span>
+                        <span><label> <input type="number" name="Lemon" value="" min="1" max="5"> Lemon
+                            </label></span>
+                        <span><label> <input type="number" name="Choco" value="" min="1" max="5"> Choco
+                            </label></span>
+                        <span><label> <input type="number" name="Mango" value="" min="1" max="5"> Mango
+                            </label></span>
+                        <span><label> <input type="number" name="Sorbet" value="" min="1" max="5"> Sorbet
+                            </label></span>
+                    </div>
+                </fieldset>
+
+                <p>
+                    <label>Pickup Date/Time <br>
+                        <input type="datetime-local" name="pickup_time">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Comments <br>
+                        <textarea name="comments" maxlength="300"></textarea>
+                    </label>
+                </p>
+
+                <p><button>Submit</button>
+                    <button id="reset">Reset</button></p>
+
+
+            </form>
+
+            <div id="resultForm"></div>
+        </div>
+        <script src="script.js"></script>
+    </main>
+</body>
+
+</html>
